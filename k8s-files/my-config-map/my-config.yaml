@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: my-configmap
-data:
-  my-data.conf: |
-    this-service abc
-    number 10
-    
