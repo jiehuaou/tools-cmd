@@ -1,0 +1,12 @@
+
+## start hadoop
+call C:\hadoop321\sbin>start-all.cmd
+
+## start the Derby network server 
+call C:\hive312\derby10\bin\StartNetworkServer.bat -h 0.0.0.0
+
+## start hive service
+hive --service metastore
+
+## start hive client
+hive 
