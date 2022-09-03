@@ -1,0 +1,32 @@
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: uppercase-java-function-trigger
+  namespace: default
+spec:
+  broker: example-broker
+  filter:
+    attributes:
+      type: UppercaseRequestedEvent
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: fmt-java
+
+---
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: append-java-function-trigger
+  namespace: default
+spec:
+  broker: example-broker
+  filter:
+    attributes:
+      type: UpperCasedEvent
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: fmt-java

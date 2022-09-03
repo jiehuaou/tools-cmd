@@ -1,0 +1,8 @@
+export VAULT_ADDR=https://localhost:8200
+
+vault status
+
+vault operator unseal kxznzTGWH0QrxLXzrQzbcwv0uRWUqrEjbA+stlw8D7rS
+vault operator unseal Jd39Fb97LabDWhn2tFRdGVnbTQ2jx6Fgw6ERYahaf6pr
+vault operator unseal ueJlFK4nTaroWjMO36vfbdfHDoAepayhqCv2YaRRnaAb
+
