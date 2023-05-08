@@ -1,4 +1,26 @@
 
+# config proxy if need like
+
+ git config --global http.proxy 127.0.0.1:7890
+
+
+
+# create a new repository on the command line
+
+echo "# demo-new" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/jiehuaou/demo-1to-many.git
+git push -u origin main
+
+# r push an existing repository from the command line
+
+git remote add origin https://github.com/jiehuaou/demo-1to-many.git
+git branch -M main
+git push -u origin main
+
 
 # How can I merge two branches without losing any files?
 
