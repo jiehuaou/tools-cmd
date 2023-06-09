@@ -138,7 +138,7 @@ git push -u origin main
 
 
 # cherry-pick:  to merge commit e27af03 from branch X to master.
-
+```
 a - b - c - d    Main
          \
            e - e27af03 - g Feature
@@ -150,7 +150,7 @@ git push
 a - b - c - d - e27af03   Main
          \
            e - e27af03 - g Feature
-    
+```    
      
 
 # How to combine 7 pushed commits into one via cmd
