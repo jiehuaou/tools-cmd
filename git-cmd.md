@@ -138,18 +138,29 @@ git push -u origin main
 
 
 # cherry-pick:  to merge commit e27af03 from branch X to master.
-```
-a - b - c - d    Main
-         \
-           e - e27af03 - g Feature
-		   
-git checkout master
-git cherry-pick e27af03
-git push
 
-a - b - c - d - e27af03   Main
+pick before
+```
+a - b - c - d       Main
          \
-           e - e27af03 - g Feature
+           e - e27af03 - g    Feature
+
+```
+
+command
+```		   
+git checkout master
+
+git cherry-pick e27af03       # directly be committed 
+
+git push
+```
+
+after
+```
+a - b - c - d - e27af03      Main
+         \
+           e - e27af03 - g   Feature
 ```    
      
 
