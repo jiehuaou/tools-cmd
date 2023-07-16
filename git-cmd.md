@@ -175,13 +175,13 @@ after
 ```
 
 
-# cherry-pick:  to merge commit e27af03 from branch X to master.
+# cherry-pick:  to merge commit f1 from branch X to master.
 
 pick before
 ```
 a - b - c - d       Main
          \
-           e - e27af03 - g    Feature
+           e - f1 - f2 - f3 - g    Feature
 
 ```
 
@@ -189,16 +189,22 @@ steps
 ```		   
 git checkout master
 
-git cherry-pick e27af03       # directly be committed 
+git cherry-pick f1                  # directly be committed 
+git cherry-pick f1 --no-commit      # without directly committing
 
+git cherry-pick f1 f2 f3        # pick multiply commit
+git cherry-pick f1~..f3         # pick range from f1 (included) to f3
+git cherry-pick f1..f3          # pick range from f1 (excluded) to f3
+
+git log                       # review the commits you just chery-picked
 git push
 ```
 
 after
 ```
-a - b - c - d - e27af03      Main
+a - b - c - d - f1      Main
          \
-           e - e27af03 - g   Feature
+           e - f1 - f2 - f3 - g   Feature
 ```    
      
 
