@@ -8,6 +8,10 @@ docker login -u user_id
 ## pull an images
 docker pull hello-world
 
+## To delete a Docker image, 
+
+docker rmi <image_id_or_name>
+
 ## run images given container name "myweb"
 docker run --name myweb hello-world
 
